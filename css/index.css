@@ -32,7 +32,8 @@ body {
   border: 1px solid #ddd;
   width: 400px;
   border-radius: 10px;
-  overflow: hidden;
+  margin-top: 10px;
+  /*overflow: hidden;*/
 }
 
 .post-header {
