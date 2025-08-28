@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.stories {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #e1306c;
+  cursor: pointer;
+}
+
+.post {
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.post-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.verified {
+  color: #0095f6;
+  font-size: 14px;
+}
+
+.post-image img {
+  width: 100%;
+  display: block;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.left-actions i {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.likes {
+  font-weight: bold;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.caption {
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.comments {
+  padding: 0 10px;
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.comments-dropdown {
+  display: none;
+  border-top: 1px solid #eee;
+  padding: 10px;
+  background: #fafafa;
+  max-height: 200px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.comment {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.comment .comment-user {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.add-comment-dropdown {
+  border-top: 1px solid #eee;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: white;
+  position: sticky;
+  bottom: 0;
+}
+
+.add-comment-dropdown input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1;
+  background: transparent;
+}
+
+.add-comment-dropdown .emoji-btn {
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+}
+
+.add-comment-dropdown .send-btn {
+  font-size: 18px;
+  color: #0095f6;
+  cursor: pointer;
+}

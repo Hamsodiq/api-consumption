@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Post</title>
+  <link rel="stylesheet" href="instagram.css">
+  <script src="instagram.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="stories">
+        <div class="story"><img src="assets/Frame (3).png" alt="story"></div>
+        <div class="story"><img src="assets/Frame (4).png" alt="story"></div>
+        <div class="story"><img src="assets/Frame (5).png" alt="story"></div>
+        <div class="story"><img src="assets/Frame (6).png" alt="story"></div>
+        <div class="story"><img src="assets/Frame (7).png" alt="story"></div>
+        <div class="story"><img src="assets/Frame (8).png" alt="story"></div>
+    </div>
+
+    <div class="post">
+        <div class="post-header">
+            <img src="assets/Frame (5).png" alt="profile" class="avatar">
+            <div class="user-info">
+                <span class="username">lewishamilton</span>
+                <i class="fa-solid fa-circle-check verified"></i>
+                <span class="time">• 5h</span>
+            </div>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        
+        <div class="post-image" id="post-image">
+            <img src="assets/Auto Layout Horizontal.png" alt="post">
+        </div>
+        
+        <div class="post-actions">
+            <div class="left-actions">
+                <i class="fa-regular fa-heart" id="like-btn"></i>
+                <i class="fa-regular fa-comment" id="comment-btn"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <i class="fa-regular fa-bookmark" id="save-btn"></i>
+        </div>
+        
+      
+        <div class="likes">741,368 likes</div>
+        
+       
+        <div class="caption">
+            <span class="username">lewishamilton</span>
+            Parabéns Ayrton, minha inspiração sempre 🇧🇷👊
+        </div>
+        
+       
+        <div class="comments" id="toggle-comments">View all 13,384 comments</div>
+        
+        
+        <div class="comments-dropdown" id="comments-dropdown">
+            <div id="comments-list"></div>
+            <div class="add-comment-dropdown">
+                <i class="fa-regular fa-face-smile emoji-btn" id="emoji-btn-dropdown"></i>
+                <input type="text" id="dropdown-input" placeholder="Add a comment...">
+                <i class="fa-solid fa-paper-plane send-btn" id="send-btn-dropdown"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
