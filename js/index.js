@@ -1,6 +1,7 @@
-let xHttp = new XMLHttpRequest();
 
 window.onload = () => {
+
+    let xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){
             // console.log(typeof this.responseText);
@@ -25,6 +26,75 @@ window.onload = () => {
     xHttp.open("GET", "https://jsonplaceholder.typicode.com/posts/", true);
     xHttp.send();
 
+    // TO user Post request method
+    let xHttp2 = new XMLHttpRequest();
+    xHttp2.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 201){
+            const reponse = JSON.parse(this.responseText);
+            console.log(reponse);
+        }else if(this.readyState == 4 && this.status == 400){
+            // display error
+        }
+    }
+    xHttp2.open("POST", "https://jsonplaceholder.typicode.com/posts/", true);
+    xHttp2.setRequestHeader("Content-type", "application/json");
+    const body= JSON.stringify({
+        title: 'tola',
+        body: 'tesing post',
+        userId: 1,
+    })
+    xHttp2.send(body);
+
+    // PUT
+    let xHttp3 = new XMLHttpRequest();
+    xHttp3.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+            const reponse = JSON.parse(this.responseText);
+            console.log(reponse);
+        }else if(this.readyState == 4 && this.status == 400){
+            // display error
+        }
+    }
+    xHttp3.open("PUT", "https://jsonplaceholder.typicode.com/posts/1", true);
+    xHttp3.setRequestHeader("Content-type", "application/json");
+    const body2= JSON.stringify({
+        title: 'wallet',
+        body: 'testing post',
+        userId: 1,
+        id:1,
+    })
+    xHttp3.send(body2);
+
+    // PATCH
+    let xHttp4 = new XMLHttpRequest();
+    xHttp4.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+            const reponse = JSON.parse(this.responseText);
+            console.log(reponse);
+        }else if(this.readyState == 4 && this.status == 400){
+            // display error
+        }
+    }
+    xHttp4.open("PATCH", "https://jsonplaceholder.typicode.com/posts/1", true);
+    xHttp4.setRequestHeader("Content-type", "application/json");
+    const body3= JSON.stringify({
+        title: 'Testign http',
+        body: 'testing post'
+    })
+    xHttp4.send(body3);
+
+    // DELETE
+    let xHttp5 = new XMLHttpRequest();
+    xHttp5.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+            const reponse = JSON.parse(this.responseText);
+            console.log(reponse);
+        }else if(this.readyState == 4 && this.status == 400){
+            // display error
+        }
+    }
+    xHttp5.open("DELETE", "https://jsonplaceholder.typicode.com/posts/1", true);
+    xHttp5.send();
 }
 
 //  function addAction(){

@@ -65,11 +65,8 @@ class PostElement extends HTMLElement {
     `;
 
         const likeBtn = this.shadowRoot.querySelector(".like-btn");
-        const likesText = document.getElementById("likes");
-        console.log(likesText);
-        // let likesCount = parseInt(likesText.innerHTML);
-        // console.log(likesCount)
-        //
+        const likesText = this.shadowRoot.getElementById("likes");
+        let likesCount = parseInt(likesText.innerHTML);
         likeBtn.addEventListener("click", toggleLike);
 
         //
@@ -78,18 +75,18 @@ class PostElement extends HTMLElement {
                 likeBtn.classList.remove("fa-regular");
                 likeBtn.classList.add("fa-solid");
                 likeBtn.style.color = "red";
-                // likesCount++;
+                likesCount++;
             } else {
                 likeBtn.classList.remove("fa-solid");
                 likeBtn.classList.add("fa-regular");
                 likeBtn.style.color = "black";
-                // likesCount--;
+                likesCount--;
             }
             updateLikes();
         }
 
         function updateLikes() {
-            // likesText.textContent = likesCount.toLocaleString() + " likes";
+            likesText.textContent = likesCount.toLocaleString();
         }
     }
 }
